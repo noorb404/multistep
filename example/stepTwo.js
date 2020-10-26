@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 
 export default () => {
-  const [email, setEmail] = useState('')
-  const [emailConfirm, setEmailConfirm] = useState('')
+  const [businessName, setbusinessName] = useState('')
 
   return (
     <div>
@@ -14,8 +13,8 @@ export default () => {
             className='u-full-width'
             placeholder='שם עסק'
             type='text'
-            onChange={e => setEmailConfirm(e.target.value)}
-            value={emailConfirm}
+            onChange={e => setbusinessName(e.target.value)}
+            value={businessName}
           />
         </div>
       </div>

@@ -3,11 +3,22 @@ import React, { useState } from 'react'
 export default () => {
   const [Income, setIncome] = useState('')
   const [Outcome, setOutcome] = useState('')
+  var result = 'רווח של'
+
+  function check(){
+    if(Income-Outcome>=0){
+      return result
+    }else{
+      return 'הפסד של'
+    }
+
+  }
+
   return (
     <div>
       <div style={{textAlign:"right"}} className='row'>
         <div className='six columns'>
-          <label>הכנסות העסק</label>
+          <label>הכנסות העסק חודשית</label>
           <input
             style={{textAlign:"right"}}
             className='u-full-width'
@@ -20,7 +31,7 @@ export default () => {
       </div>
       <div style={{textAlign:"right"}} className='row'>
         <div className='six columns'>
-          <label>הוצאות העסק</label>
+          <label>הוצאות העסק חודשית</label>
           <input
             style={{textAlign:"right"}}
             className='u-full-width'
@@ -33,11 +44,13 @@ export default () => {
       </div>
       <div style={{textAlign:"right"}} className='row'>
         <div className='six columns'>
-          <label style={{color:"green"}}> {Income - Outcome} רווח של </label>
+          <label>₪ {Math.abs(Income - Outcome)} {check()} </label>
         </div>
       </div>
      
 
     </div>
   )
+
+
 }
