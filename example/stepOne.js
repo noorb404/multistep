@@ -5,26 +5,29 @@ export default () => {
   const [lastName, setLastName] = useState('')
 
   return (
-    <div>
+    <div style={{textAlign:"right"}}>
       <div className='row'>
         <div className='six columns'>
-          <label>First Name</label>
+          <label>שם</label>
           <input
+            style={{textAlign:"right"}}
             className='u-full-width'
-            placeholder='First Name'
+            placeholder='שם'
             type='text'
             onChange={e => setFirstName(e.target.value)}
             value={firstName}
             autoFocus
+       
           />
         </div>
       </div>
       <div className='row'>
         <div className='six columns'>
-          <label>Last Name</label>
+          <label>שם משפחה</label>
           <input
+                 style={{textAlign:"right"}}
             className='u-full-width'
-            placeholder='Last Name'
+            placeholder='שם משפחה'
             type='text'
             onChange={e => setLastName(e.target.value)}
             value={lastName}

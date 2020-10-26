@@ -1,36 +1,43 @@
 import React, { useState } from 'react'
 
 export default () => {
-  const [password, setPassword] = useState('')
-  const [passwordConfirm, setPasswordConfirm] = useState('')
-
+  const [Income, setIncome] = useState('')
+  const [Outcome, setOutcome] = useState('')
   return (
     <div>
-      <div className='row'>
+      <div style={{textAlign:"right"}} className='row'>
         <div className='six columns'>
-          <label>Password</label>
+          <label>הכנסות העסק</label>
           <input
-            className='u-full-width required'
-            placeholder='Password'
-            type='password'
-            onChange={e => setPassword(e.target.value)}
-            value={password}
-            autoFocus
-          />
-        </div>
-      </div>
-      <div className='row'>
-        <div className='six columns'>
-          <label>Confirm password</label>
-          <input
+            style={{textAlign:"right"}}
             className='u-full-width'
-            placeholder='Confirm Password'
-            type='password'
-            onChange={e => setPasswordConfirm(e.target.value)}
-            value={passwordConfirm}
+            placeholder='₪'
+            onChange={e => setIncome(e.target.value)}
+            value={Income}
+            type='text'
           />
         </div>
       </div>
+      <div style={{textAlign:"right"}} className='row'>
+        <div className='six columns'>
+          <label>הוצאות העסק</label>
+          <input
+            style={{textAlign:"right"}}
+            className='u-full-width'
+            placeholder='₪'
+            value={Outcome}
+            onChange={e => setOutcome(e.target.value)}
+            type='text'
+          />
+        </div>
+      </div>
+      <div style={{textAlign:"right"}} className='row'>
+        <div className='six columns'>
+          <label style={{color:"green"}}> {Income - Outcome} רווח של </label>
+        </div>
+      </div>
+     
+
     </div>
   )
 }

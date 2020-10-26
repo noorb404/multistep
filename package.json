@@ -5,17 +5,13 @@
   "main": "index.umd.js",
   "module": "index.esm.js",
   "license": "MIT",
-  "author": {
-    "name": "@djidja8",
-    "email": "srdjan@timok.com",
-    "url": "https://github.com/srdjan"
-  },
+  "author": "@djidja8 <srdjan@timok.com> (https://github.com/srdjan)",
   "keywords": [
     "react, reactjs, responsive, component"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/srdjan/react-multistep"
+    "url": "git+https://github.com/srdjan/react-multistep.git"
   },
   "homepage": "https://github.com/srdjan/react-multistep",
   "bugs": {
@@ -38,5 +34,8 @@
     "build:prod": "esbuild react-multistep.js '--define:process.env.NODE_ENV=\"production\"' --external:'react' --bundle --minify --format=cjs --loader:.js=jsx --outfile=index.js",
     "pub:dry": "npm publish ./ --dry-run",
     "pub": "npm publish ./"
+  },
+  "directories": {
+    "example": "example"
   }
 }
